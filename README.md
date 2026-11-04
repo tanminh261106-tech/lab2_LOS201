@@ -1,33 +1,28 @@
-# Embedded Linux Lab 02
+# Embedded Linux - Lab 2
 
-## Student Information
-- Full name: Le Tan Minh
-- Student ID: SE200684
-- Assignment: Embedded Linux Lab 02
+**Student:** Le Tan Minh  
+**Student ID:** SE200684  
+**Course:** Embedded Linux
 
-## Directory Structure
-- driver/: Driver source code, Makefile and compiled kernel module.
-- rootfs/: Initramfs filesystem and driver module.
-- output/: Built initramfs archive.
-- logs/: Boot, driver, MTD/JFFS2 and build logs.
-- mtd/: JFFS2 image and source test files.
-- bao_cao/: Lab report in PDF format.
+## Project Structure
 
-## Main Artifacts
-- driver/lab2_driver.c
-- driver/Makefile
-- driver/lab2_driver.ko
-- output/initramfs_lab2.cpio.gz
-- bao_cao/SE200684_Lab02_BaoCao.pdf
+- `driver/`: Linux kernel module source code and Makefile.
+- `configs/`: Kernel configuration.
+- `logs/`: Build, boot, driver and MTD test logs.
+- `output/`: Generated initramfs image.
+- `rootfs/`: Root filesystem and kernel module.
+- `mtd/`: JFFS2 filesystem and persistence test data.
+- `bao_cao/`: Lab 2 report in PDF format.
 
-## Verification
-Check the initramfs archive:
-    gzip -t output/initramfs_lab2.cpio.gz
+## Main Components
 
-Check driver module hashes:
-    sha256sum driver/lab2_driver.ko rootfs/lab2_driver.ko
+- Linux character device driver.
+- Device file and sysfs interface.
+- MTD NAND simulation.
+- JFFS2 filesystem persistence test.
 
-Inspect the initramfs contents:
-    gzip -dc output/initramfs_lab2.cpio.gz | cpio -it
+## Build Environment
 
-Review the logs and PDF report before submission.
+- Linux Kernel: 5.15.0
+- Architecture: ARM
+- Emulator: QEMU
