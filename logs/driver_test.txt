@@ -1,0 +1,34 @@
+LAB-02 AUTOMATED DRIVER TEST
+
+Kernel: Linux 5.15.0, ARMv7
+
+[TEST 1] Character device
+PASS: /dev/lab2 exists
+
+[TEST 2] Write data
+PASS: write succeeded
+
+[TEST 3] Read data
+Read data: Hello LAB2 Part D
+PASS: read data matches
+
+[TEST 4] Procfs
+Driver: lab2
+Major: 240
+Buffer size: 1024
+Buffer length: 17
+Overwrites: 1
+Open count: 0
+Last data: Hello LAB2 Part D
+PASS: procfs is readable
+
+[TEST 5] Sysfs
+buffer_len: 17
+open_count: 0
+last_data: Hello LAB2 Part D
+PASS: sysfs attributes are readable
+
+[TEST 6] Kernel module
+PASS: lab2_driver is loaded
+
+RESULT: ALL TESTS PASSED

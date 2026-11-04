@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo "[LAB2] Starting Embedded Linux Lab 2"
+
+# Mount temporary filesystem
+mount -t tmpfs tmpfs /tmp
+
+# Load LAB2 character device driver
+if insmod /lib/modules/5.15.0/lab2_driver.ko; then
+    echo "[LAB2] Driver loaded successfully"
+else
+    echo "[LAB2] ERROR: Failed to load driver"
+fi
+
+# Create device node if devtmpfs did not create it
+if [ ! -e /dev/lab2 ]; then
+    mknod /dev/lab2 c 240 0
+fi
+
+chmod 666 /dev/lab2 2>/dev/null
+
+echo "[LAB2] Startup script finished"

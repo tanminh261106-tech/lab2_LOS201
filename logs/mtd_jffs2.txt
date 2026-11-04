@@ -1,0 +1,33 @@
+===== MTD INFORMATION =====
+mtd1
+Name:                           NAND simulator partition 0
+Type:                           nand
+Eraseblock size:                16384 bytes, 16.0 KiB
+Amount of eraseblocks:          8192 (134217728 bytes, 128.0 MiB)
+Minimum input/output unit size: 512 bytes
+Sub-page size:                  256 bytes
+OOB size:                       16 bytes
+Character device major/minor:   90:2
+Bad blocks are allowed:         true
+Device is writable:             true
+
+
+===== ERASE LOG =====
+Erasing 131072 Kibyte @ 0 --  0 % complete Erasing 131072 Kibyte @ 0 -- 100 % complete 
+
+===== WRITE LOG =====
+Writing data to block 0 at offset 0x0
+
+===== JFFS2 FILES =====
+total 4
+drwxr-xr-x 3 root           root              0 Jan  1  1970 .
+drwxrwxr-x 4 minhltse200684 minhltse200684 4096 Nov  3 14:14 ..
+-rw-r--r-- 1 root           root             35 Nov  3 14:17 persistence_after_mount.txt
+-rw-rw-r-- 1 minhltse200684 minhltse200684   28 Nov  3 14:14 persistence_test.txt
+-rw-rw-r-- 1 minhltse200684 minhltse200684   36 Nov  3 14:14 student_info.txt
+
+===== PERSISTENCE TEST =====
+LAB2 JFFS2 persistence test
+MSSV: SE200684
+Student: Le Tan Minh
+Persistence verified after remount
